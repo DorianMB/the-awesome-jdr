@@ -1,0 +1,33 @@
+<div class="row justify-content-sm-center">
+  <div class="col-sm-8">
+    <h2>Créer un nouveau perso</h2>
+    <form  [formGroup]="persoForm" (ngSubmit)="onSavePerso()">
+      <div class="form-group">
+        <label for="nom">Nom*</label>
+        <input type="text" class="form-control" id="nom" formControlName="nom">
+      </div>
+      <div class="form-group">
+        <label for="classe">Classe*</label>
+        <input type="text" class="form-control" id="classe" formControlName="classe">
+      </div>
+      <div class="form-group">
+        <label for="race">Race*</label>
+        <input type="text" class="form-control" id="race" formControlName="race">
+      </div>
+      <div class="form-group">
+        <label for="level">Level*</label>
+        <input type="number" class="form-control" id="level" formControlName="level" min="1" max="100">
+      </div>
+      <div class="form-group">
+        <label for="historique">Historique</label>
+        <input type="text" class="form-control" id="historique" formControlName="historique">
+      </div>
+      <div class="form-group">
+        <label for="alignement">Alignement</label>
+        <input type="text" class="form-control" id="alignement" formControlName="alignement">
+      </div>
+      <p>* : requis</p>
+      <button type="submit" class="btn btn-success" [disabled]="persoForm.invalid">Sauvegarder le livre</button>
+    </form>
+  </div>
+</div>

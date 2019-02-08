@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-12">
+    <h2>Liste des persos du JdR</h2>
+      <button type="button" class="btn btn-outline-dark btn-lg btn-block" *ngFor="let perso of persos; let i = index" (click)="onViewPerso(i)">
+        <h3>{{ perso.nom }}</h3>
+        <div class="row justify-content-center">
+          <div class="col-3">classe : {{perso.classe}}</div>
+          <div class="col-3">race : {{perso.race}}</div>
+          <div class="col-3">lvl : {{perso.level}}</div>
+          <button class="btn btn-danger" (click)="onDeletePerso(perso)">
+            <span>-</span>
+          </button>
+        </div>
+      </button>
+    <button class="btn btn-primary" (click)="onNewPerso()">Nouveau perso</button>
+  </div>
+</div>

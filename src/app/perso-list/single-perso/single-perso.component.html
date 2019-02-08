@@ -1,0 +1,30 @@
+<h1 class="text-center">nom : {{perso.nom}}</h1>
+<div class="row attribut">
+  <span class="col-sm-4 text-center">classe : {{perso.classe}}</span>
+  <span class="col-sm-4 text-center">race : {{perso.race}}</span>
+  <span class="col-sm-4 text-center">level : {{perso.level}}</span>
+  <span class="col-sm-4 text-center">historique : {{perso.historique}}</span>
+  <span class="col-sm-4 text-center">alignement : {{perso.alignement}}</span>
+  <span class="col-sm-4 text-center">créé par : {{perso.createdBy}}</span>
+</div>
+<div class="row body-perso">
+  <div class="col-sm-2 row">
+    <span class="text-center col-12">Force : {{perso.force ? perso.force : ''}}</span>
+    <span class="text-center col-12">Dexterité : {{perso.dex ? perso.dex : ''}}</span>
+    <span class="text-center col-12">Constitution : {{perso.constitution ? perso.constitution : ''}}</span>
+    <span class="text-center col-12">Intelligence : {{perso.intelligence ? perso.intelligence : ''}}</span>
+    <span class="text-center col-12">Sagesse : {{perso.sagesse ? perso.sagesse : ''}}</span>
+    <span class="text-center col-12">Charisme : {{perso.charisme ? perso.charisme : ''}}</span>
+  </div>
+  <div class="col-sm-3">
+    <p class="text-center">Inspiration : {{perso.inspiration}}</p>
+    <p class="text-center">Bonus de maitrise : {{perso.bonusMaitrise}}</p>
+  </div>
+  <div class="col-sm-4"></div>
+  <div class="col-sm-3"></div>
+</div>
+<div class="container">
+  <button class="btn btn-primary" (click)="onBack()">Retour</button>
+  <button class="btn btn-primary " (click)="onEdit()" *ngIf="isCreatedBy()">Edit</button>
+</div>
+

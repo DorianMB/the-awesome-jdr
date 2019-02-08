@@ -1,0 +1,7 @@
+nav{
+  margin-bottom: 5vh;
+}
+.name-email:hover, name-email:focus{
+  color: #8b95a0 !important;
+  cursor: default;
+}

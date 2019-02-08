@@ -1,0 +1,67 @@
+<div class="row justify-content-sm-center">
+  <div class="col-sm-8">
+    <h2>Modifier un nouveau perso</h2>
+    <form  [formGroup]="persoEdit" (ngSubmit)="onSavePerso()">
+      <div class="form-group">
+        <label for="nom">Nom*</label>
+        <input type="text" class="form-control" id="nom" formControlName="nom" [value]="perso.nom">
+      </div>
+      <div class="form-group">
+        <label for="classe">Classe*</label>
+        <input type="text" class="form-control" id="classe" formControlName="classe" [value]="perso.classe">
+      </div>
+      <div class="form-group">
+        <label for="race">Race*</label>
+        <input type="text" class="form-control" id="race" formControlName="race" [value]="perso.race">
+      </div>
+      <div class="form-group">
+        <label for="level">Level*</label>
+        <input type="number" class="form-control" id="level" formControlName="level" min="1" max="100" [value]="perso.level">
+      </div>
+      <div class="form-group">
+        <label for="historique">Historique</label>
+        <input type="text" class="form-control" id="historique" formControlName="historique" [value]="perso.historique ? perso.historique : ''">
+      </div>
+      <div class="form-group">
+        <label for="alignement">Alignement</label>
+        <input type="text" class="form-control" id="alignement" formControlName="alignement" [value]="perso.alignement ? perso.alignement : ''">
+      </div>
+      <div class="row">
+        <div class="form-group col-sm-4">
+          <label for="force">Force</label>
+          <input type="number" class="form-control" id="force" formControlName="force" min="1" max="100" [value]="perso.force">
+        </div>
+        <div class="form-group col-sm-4">
+          <label for="dex">Dexterité</label>
+          <input type="number" class="form-control" id="dex" formControlName="dex" min="1" max="100" [value]="perso.dex">
+        </div>
+        <div class="form-group col-sm-4">
+          <label for="constitution">Constitution</label>
+          <input type="number" class="form-control" id="constitution" formControlName="constitution" min="1" max="100" [value]="perso.constitution">
+        </div>
+        <div class="form-group col-sm-4">
+          <label for="intelligence">Intelligence</label>
+          <input type="number" class="form-control" id="intelligence" formControlName="intelligence" min="1" max="100" [value]="perso.intelligence">
+        </div>
+        <div class="form-group col-sm-4">
+          <label for="sagesse">Sagesse</label>
+          <input type="number" class="form-control" id="sagesse" formControlName="sagesse" min="1" max="100" [value]="perso.sagesse">
+        </div>
+        <div class="form-group col-sm-4">
+          <label for="charisme">Charisme</label>
+          <input type="number" class="form-control" id="charisme" formControlName="charisme" min="1" max="100" [value]="perso.charisme">
+        </div>
+        <div class="form-group col-sm-6">
+          <label for="inspiration">Inspiration</label>
+          <input type="number" class="form-control" id="inspiration" formControlName="inspiration" min="1" max="100" [value]="perso.inspiration">
+        </div>
+        <div class="form-group col-sm-6">
+          <label for="bonusMaitrise">Bonus de maitrise</label>
+          <input type="number" class="form-control" id="bonusMaitrise" formControlName="bonusMaitrise" min="1" max="100" [value]="perso.bonusMaitrise">
+        </div>
+      </div>
+      <p>* : requis</p>
+      <button type="submit" class="btn btn-success">Sauvegarder le perso</button>
+    </form>
+  </div>
+</div>
